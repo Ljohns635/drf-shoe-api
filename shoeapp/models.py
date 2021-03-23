@@ -5,8 +5,16 @@ class Manufacturer(models.Model):
     name = models.CharField(max_length=50)
     website = models.URLField(max_length=200)
 
+    def __str__(self):
+        return self.name
+    
+
 class ShoeType(models.Model):
     style = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.style
+    
 
 class ShoeColor(models.Model):
     RED = 'red'
@@ -34,6 +42,10 @@ class ShoeColor(models.Model):
         choices=CHOICES,
     )
 
+    def __str__(self):
+        return self.color_name
+    
+
 class Shoe(models.Model):
     size = models.PositiveIntegerField()
     brand_name = models.CharField(max_length=50)
@@ -42,3 +54,7 @@ class Shoe(models.Model):
     material = models.CharField(max_length=50)
     shoe_type = models.ForeignKey('ShoeType', on_delete=models.CASCADE)
     fasten_type = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f'{self.brand_name} | {self.manufacturer}'
+    
