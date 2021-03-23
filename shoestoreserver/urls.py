@@ -17,7 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from shoeapp import views
 
+from api.urls import urlpatterns as api_urls
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage),
 ]
+
+urlpatterns += api_urls
