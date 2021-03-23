@@ -10,7 +10,22 @@ class Manufacturer(models.Model):
     
 
 class ShoeType(models.Model):
-    style = models.CharField(max_length=50)
+    SNEAKER = 'sneaker'
+    BOOT = 'boot'
+    SANDAL = 'sandal'
+    DRESS = 'dress'
+    OTHER = 'other'
+    TYPES = [
+        (SNEAKER, 'sneaker'),
+        (BOOT, 'boot'),
+        (SANDAL, 'sandal'),
+        (DRESS, 'dress'),
+        (OTHER, 'other'),
+    ]
+    style = models.CharField(
+        max_length=9,
+        choices=TYPES
+    )
 
     def __str__(self):
         return self.style
