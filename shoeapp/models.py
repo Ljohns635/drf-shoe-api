@@ -27,15 +27,15 @@ class ShoeColor(models.Model):
     WHITE = 'white'
     BLACK = 'black'
     CHOICES = [
-        (RED, 'Red'),
-        (ORANGE, 'Orange'),
-        (YELLOW, 'Yellow'),
-        (GREEN, 'Green'),
-        (BLUE, 'Blue'),
-        (INDIGO, 'Indigo'),
-        (VIOLET, 'Violet'),
-        (WHITE, 'White'),
-        (BLACK, 'Black')
+        (RED, 'red'),
+        (ORANGE, 'orange'),
+        (YELLOW, 'yellow'),
+        (GREEN, 'green'),
+        (BLUE, 'blue'),
+        (INDIGO, 'indigo'),
+        (VIOLET, 'violet'),
+        (WHITE, 'white'),
+        (BLACK, 'black')
     ]
     color_name = models.CharField(
         max_length=9,
