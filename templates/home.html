@@ -1,13 +1,102 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <title>Document</title>
-</head>
-<body>
-   <h1>Shoe Store</h1> 
-   <p><a href="/api">API Page</a></p>
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="/">DSO</a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/api">API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin">Admin</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="jumbotron text-center p-3 my-3 bg-dark text-white">
+        <h1>Discount Shoe Outlet</h1>
+        <p>If you love style at a great price, shop our outlet!</p>
+      
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="{% static 'img/nike.jpg' %}"
+            alt="Nike Shoe"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Nike</h5>
+            <p class="card-text">
+              Shop Nike For The Latest Shoes & Gear, From Classic To Modern
+              Styles. Featuring The Latest Nike® Technology & Innovations. Find
+              The Best Fit For You.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"
+              ><a href="/api/manufacturer/">Check the Manufacturer</a></small
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="{% static 'img/adidias2.jpg' %}"
+            alt="Adidas Shoe"
+            height="220"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Adida</h5>
+            <p class="card-text">
+              Find What You Need For Comfort & Style. Lacing Up For The Game Or
+              Kicking Back At Home.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"
+              ><a href="/api/shoe/">Check the Shoe</a></small
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="{% static 'img/vans2.jpg' %}"
+            alt="Vans Shoe"
+            height="220"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Vans</h5>
+            <p class="card-text">
+              Discover the latest shoe styles when you shop for Vans footwear at
+              Dscount Shoe Outlet. Browse through the complete collection.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"
+              ><a href="/api/type/">Check the Types</a></small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center bg-dark text-white">
+        Copyright Latisha Johnson
+      </div>
+    </div>
+  </body>
 </html>
